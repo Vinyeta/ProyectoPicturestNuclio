@@ -1,0 +1,23 @@
+.img {
+    display: flex;
+    flex-direction: row;
+    align-items: center; 
+}
+
+#avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+
+}
+
+#forward {
+    width: 4.64px;
+    height: 9.28px;
+    padding: 12.48px;
+}
+
+.dropDown {
+    display: flex;
+    flex-direction: column;
+}

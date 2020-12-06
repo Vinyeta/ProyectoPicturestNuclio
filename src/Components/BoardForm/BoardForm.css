@@ -1,0 +1,22 @@
+.boardform_copntainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    margin-top: 24.58px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form > label {
+    width: 33.2px;
+    height: 9.37px;
+    margin-bottom: 19.87px;
+}
+
+.form > input {
+    width: 419px;
+    height: 50px;
+    margin-bottom: 46px;
+}

@@ -1,0 +1,29 @@
+.board__container {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 215px;
+    height: 176px;
+    background: #F1F1F1;
+    border-radius: 14px;
+}
+.spans_container{
+    display: flex;
+    flex-direction: column;
+}
+.title {
+    bottom: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.pins_count{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    color: #6B6B70;
+}

@@ -1,0 +1,21 @@
+.pin__container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 0 22px;
+}
+
+.pin__container > img {
+    width: 215px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.pin__container > span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+}

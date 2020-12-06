@@ -1,0 +1,30 @@
+.pinform_container > span {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.pinform_container > form {
+    margin-top: 24.58px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pinform_container > form > div > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.pinform_container > form > div > div > label {
+    width: 33.2px;
+    height: 9.37px;
+    margin-bottom: 19.87px;
+}
+
+.pinform_container > form > div > div > input {
+    width: 419px;
+    height: 50px;
+    margin-bottom: 46px;
+}
