@@ -1,11 +1,8 @@
 import { useEffect, useState} from 'react';
 import './App.css';
-import PinsList from "./Components/PinsList/PinsList";
-import BoardList from './Components/BoardList/BoardList';
-import UserCard from './Components/UserCard/UserCard';
 import Header from './Components/Header/Header';
-import BoardForm from './Components/BoardForm/BoardForm';
-import PinsForm from './Components/PinsForm/PinsForm';
+
+import HomePage from './pages/homePage';
 
 function App() {
   
@@ -24,16 +21,7 @@ function App() {
       firstname={user.firstName} 
       lastname={user.lastName} 
       />
-      <UserCard 
-      firstname={user.firstName} 
-      lastname={user.lastName} 
-      username={user.userName} 
-      avatar={user.avatar} 
-      numberfollowing={user.following}/>
-      <BoardList />
-      <BoardForm id={user.id}/>
-      <PinsList  />
-      <PinsForm id={user.id} />
+      <HomePage user={user} />
     </div>
   );
 }
