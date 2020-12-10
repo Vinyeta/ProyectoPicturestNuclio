@@ -33,7 +33,7 @@ const BoardForm = ({ id }) => {
     
     
     return (
-        <div className='boardform_copntainer'>
+        <div className='boardform_container'>
             <span>Create board</span>
             <form className='form'>
                 <label>Name</label>

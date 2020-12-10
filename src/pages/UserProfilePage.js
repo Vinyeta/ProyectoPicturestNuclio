@@ -12,3 +12,5 @@ const UserProfilePage = ({ user }) => {
         />
     )
 };
+
+export default UserProfilePage;

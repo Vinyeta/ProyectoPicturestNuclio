@@ -1,7 +1,11 @@
 import { useEffect, useState} from 'react';
+import {  BrowserRouter as Router,
+          Switch,
+          Route } from 'react-router-dom';
 import './App.css';
 import Header from './Components/Header/Header';
-
+import BoardPage from './pages/boardPage';
+import UserProfilePage from './pages/UserProfilePage';
 import HomePage from './pages/homePage';
 
 function App() {
@@ -16,12 +20,25 @@ function App() {
 
   return (
     <div>
-      <Header 
-      avatar={user.avatar}
-      firstname={user.firstName} 
-      lastname={user.lastName} 
-      />
-      <HomePage user={user} />
+      <Router>
+        <Header 
+        avatar={user.avatar}
+        firstname={user.firstName} 
+        lastname={user.lastName} 
+        />
+        <Switch>
+          <Route path='/boards'>
+            <BoardPage />
+          </Route>
+          <Route path='/user'> 
+           <UserProfilePage user={user} />
+          </Route>
+          <Route path='/'>
+            <HomePage user={user} />
+          </Route>       
+        
+        </Switch>
+      </Router>
     </div>
   );
 }

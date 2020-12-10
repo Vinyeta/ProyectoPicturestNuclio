@@ -14,7 +14,7 @@ const BoardList = () => {
     return (
         <div className='boardsList_container'>
             {boards.map((board) => (
-                <BoardCard title={board.title} id={board.id} pins={1} />
+                <BoardCard title={board.title} id={board.id} pins={board.numPins} />
             ))}
         </div>
     )

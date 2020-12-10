@@ -6,10 +6,42 @@
     background: #F1F1F1;
     border-radius: 14px;
 }
+
+.bottom_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.edit {
+    display: none;
+    border-radius: 100%;
+    width: 39px;
+    height: 39px;
+}
+
+.edit:hover .edit {
+    border-width: 5px;
+    border-style: line;
+    border-color: blue;
+}
+
+.edit:hover .edit > img {
+    color:blue;
+    filter: brightness(50%);
+}
+
+.board__container:hover .edit {
+    display: block;
+}
+
 .spans_container{
     display: flex;
     flex-direction: column;
+    margin-bottom: 13px;
 }
+
+
 .title {
     bottom: 0;
     font-family: Roboto;
