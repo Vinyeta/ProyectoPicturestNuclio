@@ -27,7 +27,7 @@ function App() {
         lastname={user.lastName} 
         />
         <Switch>
-          <Route path='/boards'>
+          <Route path='/boards/:id'>
             <BoardPage />
           </Route>
           <Route path='/user'> 
