@@ -19,3 +19,37 @@
     line-height: 14px;
     letter-spacing: 0.02em;
 }
+
+.source {
+    bottom: 13%;
+    position: relative;
+    width: 113px;
+    height: 21px;
+    background: rgba(241, 241, 241, 0.75);
+    border-radius: 21.5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display:none;
+    flex-direction: row;
+}
+
+.pin__container:hover .source{
+    display: flex;
+}
+
+.source > a {
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: black;
+}
+
+.source > img {
+    width: 12px;
+    height: 12px;
+    align-self: top;
+}

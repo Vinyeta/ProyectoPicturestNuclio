@@ -49,7 +49,7 @@ const PinsForm = ({ id }) => {
                         <label>URL Link</label>
                         <input type='text' name='urlImage' onChange={(e) => setUrlImage(e.target.value)} />
                     </div>
-                 </div>
+                </div>
                  <div>
                      <div>
                         <label>Description</label>

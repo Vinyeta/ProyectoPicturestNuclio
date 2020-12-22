@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react';
 import './BoardPins.css';
 import PinsCard from './../PinsCard/PinsCard';
 

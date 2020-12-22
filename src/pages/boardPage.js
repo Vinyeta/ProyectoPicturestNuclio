@@ -1,13 +1,37 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import PinsForm from '../Components/BoardForm/BoardForm';
+import Modal from 'react-modal';
+import PinsForm from '../Components/PinsForm/PinsForm';
 import BoardPins from './../Components/BoardPins/BoardPins';
 import Vector from '../Assets/Vector.png';
+import './ModalButton.css';
 
 
 
 
 const BoardPage = () => {
+
+    const customStyles = {
+        content : {
+          top                   : '50%',
+          left                  : '50%',
+          right                 : 'auto',
+          bottom                : 'auto',
+          marginRight           : '-50%',
+          transform             : 'translate(-50%, -50%)'
+        }
+      };
+
+
+    const [modalIsOpen, setIsOpen] = useState(false);
+
+    const openModal = () => {
+        setIsOpen(true);
+    }
+
+    const closeModal = () => {
+        setIsOpen(false);
+    }
 
     const params = useParams();
 
@@ -15,30 +39,29 @@ const BoardPage = () => {
 
     useEffect(() => {
         fetch(`http://localhost:5000/api/boards/${params.id}`)
-        .then((response) => response.json())
-        .then((json) => setBoard(json));
-    },[]);
-
-    const [toggle, setToggle] = useState(false);
-
-    const handleToggle = () => {
-        setToggle(!toggle);
-    };
+            .then((response) => response.json())
+            .then((json) => setBoard(json));
+    }, []);
 
 
     return (
         <div>
             <span>{board.title}</span>
             <span>{board.authorName}</span>
-            <div>
-                <img src={Vector} alt='Crear pin' onClick={handleToggle} />
+            <div className='ModalButton' onClick={openModal}>
+                <img src={Vector} alt='Crear pin'  />
             </div>
-            {toggle &&
+            <Modal
+                isOpen={modalIsOpen}
+                onRequestClose={closeModal}
+                style={customStyles}
+                contentLabel="Pins Form"
+            >
                 <PinsForm />
-            }
-         
+            </Modal>
+
                 <BoardPins pins={board.boardPins} />
-            
+
         </div>
     )
 };

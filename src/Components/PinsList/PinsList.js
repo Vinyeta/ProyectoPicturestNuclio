@@ -16,7 +16,7 @@ const PinsList = () => {
     return (
         <div className='container'>
             {pins.map((pin) => (
-                    <PinsCard urlImage={pin.urlImage} name={pin.name} />
+                    <PinsCard urlImage={pin.urlImage} name={pin.name} source={pin.source} />
                 ))}
         </div>
     )
