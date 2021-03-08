@@ -18,7 +18,7 @@ const LoginForm = () => {
             },
             'body': JSON.stringify(body)
         }
-        fetch("http://localhost:5002/login", options) // If the method is not especified  , by default use get
+        fetch("http://localhost:5000/login", options) // If the method is not especified  , by default use get
             .then(response => response.json())
             .then(json => {
                 localStorage.setItem("token", json.token)

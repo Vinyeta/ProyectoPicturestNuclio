@@ -40,7 +40,8 @@ const BoardPage = () => {
     useEffect(() => {
         fetch(`http://localhost:5000/api/boards/${params.id}`)
             .then((response) => response.json())
-            .then((json) => setBoard(json));
+            .then((json) => setBoard(json)); 
+            // eslint-disable-next-line react-hooks/exhaustive-deps   
     }, []);
 
 
