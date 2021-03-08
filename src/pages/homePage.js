@@ -7,6 +7,7 @@ const HomePage = () => {
     return (
         <div>
             <PinsList />
+            Hola
         </div>
     )
 }
