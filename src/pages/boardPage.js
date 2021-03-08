@@ -35,7 +35,7 @@ const BoardPage = () => {
 
     const params = useParams();
 
-    const [board, setBoard] = useState({});
+    const [test, setBoard] = useState({});
 
     useEffect(() => {
         fetch(`http://localhost:5000/api/boards/${params.id}`)
@@ -46,8 +46,8 @@ const BoardPage = () => {
 
     return (
         <div>
-            <span>{board.title}</span>
-            <span>{board.authorName}</span>
+            <span>{test.board && test.board.title}</span>
+            <span>{test.board && test.board.author.userName}</span>
             <div className='ModalButton' onClick={openModal}>
                 <img src={Vector} alt='Crear pin'  />
             </div>
@@ -60,7 +60,7 @@ const BoardPage = () => {
                 <PinsForm />
             </Modal>
 
-                <BoardPins pins={board.boardPins} />
+                <BoardPins pins={test.pins} />
 
         </div>
     )

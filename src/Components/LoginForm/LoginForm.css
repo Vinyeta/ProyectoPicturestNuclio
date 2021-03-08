@@ -1,0 +1,41 @@
+.login__container {
+    margin:auto;
+    width: 420px;
+    height: 340px;
+    background:rgb(117, 117, 117);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    font-family: roboto;
+    padding-top: 20px;
+}
+.sign__in {
+    font-family: roboto;
+    margin-left: 170px;
+    font-size: 30px;
+}
+.email__container{
+    padding-top: 10px;
+    padding-left: 10px;
+    margin:auto;
+    margin-top:50px;
+    font-style: normal;
+    font-family: Roboto;
+    color: white;
+}
+.password__container {
+    padding-top: 40px;
+    padding-left: 10px;
+    font-style: normal;
+    font-family: Roboto;
+    color: white            ;
+}
+.email__box {
+margin-left: 44px;
+width: 300px;
+height: 30px;
+}
+.password__box{
+    margin-left: 22px;
+    width: 300px;
+    height: 30px;
+}

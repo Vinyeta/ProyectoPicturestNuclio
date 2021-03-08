@@ -16,7 +16,7 @@ const BoardList = () => {
             <span>Boards</span>
             <div className='boardsList_container'>
                 {boards.map((board) => (
-                    <BoardCard title={board.title} id={board.id} pins={board.numPins} />
+                    <BoardCard board={board} />
                 ))}
             </div>
         </div>
